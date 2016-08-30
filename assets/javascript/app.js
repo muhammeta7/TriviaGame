@@ -41,7 +41,7 @@ var triviaQuestions = [ {
 	answer: 1
 }];
 
-var imgArray = ['image1', 'image2', 'image3', 'image4', 'image5', 'image6', 'image7', 'image8', 'image9', 'image10'];
+var gifArray = ['gif1', 'gif2', 'gif3', 'gif4', 'gif5', 'gif6', 'gif7', 'gif8', 'gif9', 'gif10'];
 var currentQuestion;
 var correct;
 var incorrect;
@@ -85,7 +85,7 @@ function newGame(){
 function nextQuestion (){
 	$('#answerMessage').empty();
 	$('#answer').empty();
-	$('#image-holder').empty();
+	$('#gif-holder').empty();
 	answered = true;
 
 	// Sets up new questions and answerList
@@ -132,7 +132,7 @@ function answerPage(){
 
 	var correctAnsText = triviaQuestions[currentQuestion].answerList[triviaQuestions[currentQuestion].answer];
 	var correctAnsIndex = triviaQuestions[currentQuestion].answer;
-	$('#image-holder').html('<img src = "assets/images/' + imgArray[currentQuestion] + '.jpg" width="600px" height = "600px"">')
+	$('#gif-holder').html('<img src = "assets/images/' + gifArray[currentQuestion] + '.gif"">')
 	
 	if(userChoice == correctAnsIndex && answered ==true){
 		correct++;
@@ -163,7 +163,7 @@ function score(){
 	$('#timeLeft').empty();
 	$('#answerMessage').empty();
 	$('#answer').empty();
-	$('#image-holder').empty();
+	$('#gif-holder').empty();
 	$('#gameMessage').html(messages.complete);
 	$('#correct').html("Correct Answers: " + correct);
 	$('#incorrect').html("Incorrect Answers: " + incorrect);

@@ -4,7 +4,7 @@ header img {
 
 header h1 {
 	text-align: left;
-	color: blue;
+	color: white;
 	font-family: 'Baloo Tamma', cursive;
 	font-size: 48px;
 	position: relative;
@@ -67,16 +67,16 @@ body {
 	top: -80px;
 }
 
-.container #image-holder {
-	height: 250px;
-	width: 250px;
+.container #gif-holder {
 	float: center;
 	position: relative;
 	top: -60px;
-	left: 250px;
+	/*left: 250px;*/
 }
 
 .container #gameMessage, #correct, #incorrect, #unanswered, #restart {
 	color: white;
 	font-size : 25px;
+	position: relative;
+	top: -100px;
 } 
