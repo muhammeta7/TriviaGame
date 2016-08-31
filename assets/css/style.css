@@ -53,7 +53,7 @@ body {
 	top: -20px;
 }
 
-.container #answerList {
+.container #answerList{
 	color: white;
 	font-size: 25px;
 	position: relative;
@@ -71,12 +71,11 @@ body {
 	float: center;
 	position: relative;
 	top: -60px;
-	/*left: 250px;*/
 }
 
 .container #gameMessage, #correct, #incorrect, #unanswered, #restart {
 	color: white;
 	font-size : 25px;
 	position: relative;
-	top: -100px;
+	top: -60px;
 } 

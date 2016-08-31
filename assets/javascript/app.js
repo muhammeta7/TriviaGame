@@ -8,11 +8,11 @@ var triviaQuestions = [ {
 	answerList : ["4", "8", "6", "3"],
 	answer: 2
 }, {
-	question : "WWho scored an NBA record 100 points in a single game?",
+	question : "Who scored an NBA record 100 points in a single game?",
 	answerList : ["Wilt Chamberlain", "Michael Jordan", "Kobe Bryant", "Larry Bird"],
 	answer: 0
 }, {
-	question : "Who hold the NFL single season rushing yards record?",
+	question : "Who holds the NFL single season rushing yards record?",
 	answerList : ["Adrian Peterson", "Eric Dickerson", "O.J. Simpson", "Jim Brown"],
 	answer: 1
 }, {
@@ -25,7 +25,7 @@ var triviaQuestions = [ {
 	answer: 3
 }, {
 	question : "Who is the all time Touch-Downs leader NFL history?",
-	answerList : ["Emmitt Smith", "Randy Moss", "Jerry Rice", "Walter Payton"],
+	answerList : ["Emmitt Smith", "Randy Moss", "Jerry Rice", "Walter Payton"], 
 	answer: 2
 }, {
 	question : "Which NBA player is the all time leader in points per game?",
@@ -92,7 +92,7 @@ function nextQuestion (){
 	$('#currentQuestion').html('Question #' + (currentQuestion+1) + '/' + triviaQuestions.length);
 	$('#question').html('<h2>' + triviaQuestions[currentQuestion].question + '</h2>');
 	for( var i=0; i<4; i++){
-		var choices = $('<div>');
+		var choices = $('<div></div>');
 		choices.text(triviaQuestions[currentQuestion].answerList[i]);
 		choices.attr({'data-index': i});
 		choices.addClass('selection');
@@ -129,6 +129,20 @@ function answerPage(){
 	$('#currentQuestion').empty();
 	$('.selection').empty();
 	$('#question').empty();
+
+	// var queryURL = "http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
+
+	// $.ajax({url: queryURL, method: 'GET'})
+	//  .done(function(data) {
+	//      var myGiphyArray = data.data;
+ //       $.each(myGiphyArray, function(index, value){
+ //        console.log(value);
+ //        var embedUrl = value.images.original.url,
+ //        newImage = $('<img>');
+ //        newImage.attr('src', embedUrl);
+ //        $('#gif-holder').append(newImage);
+ //       });
+	// });
 
 	var correctAnsText = triviaQuestions[currentQuestion].answerList[triviaQuestions[currentQuestion].answer];
 	var correctAnsIndex = triviaQuestions[currentQuestion].answer;
