@@ -21,7 +21,7 @@ Play here: https://ma-trivia.herokuapp.com/
 ![Answer-Wrong](screenshots/incorrect.png)
 
 ### Scoreboard
-![Scoreboard](screenshots/scoreboard.png)
+![Scoreboard](screenshots/score.png)
 
 
 ## Technologies used
